@@ -23,7 +23,7 @@
         <span class="brand-copy"><strong>Rameez</strong><small>Creative portfolio</small></span>
       </a>
       <nav aria-label="Main navigation">
-        <a href="#work">Work</a><a href="#expertise">Expertise</a><a href="#about">About</a><a href="#experience">Experience</a>
+        <a href="#work">Work</a><a href="#archive">Archive 108+</a><a href="#expertise">Expertise</a><a href="#about">About</a><a href="#experience">Experience</a>
       </nav>
       <a class="header-contact" href="#contact">Let's talk <span aria-hidden="true">&#8599;</span></a>
     </header>
@@ -142,9 +142,32 @@
       </div>
     </section>
 
+    <section class="archive-section" id="archive">
+      <div class="archive-head">
+        <div>
+          <p class="eyebrow">02 / Project archive</p>
+          <h2>108 studies.<br><em>Three clear disciplines.</em></h2>
+        </div>
+        <div class="archive-summary">
+          <strong>108</strong>
+          <p>Explore the concept archive by discipline. Graphic design, interiors, and exterior architecture are separated into clear collections.</p>
+          <small>AI-assisted concept studies created for portfolio presentation.</small>
+        </div>
+      </div>
+      <div class="archive-toolbar" role="group" aria-label="Filter project archive">
+        <button class="archive-filter is-active" type="button" data-filter="all" aria-pressed="true">All <span>108</span></button>
+        <button class="archive-filter" type="button" data-filter="graphic" aria-pressed="false">Graphic Design <span>54</span></button>
+        <button class="archive-filter" type="button" data-filter="interior" aria-pressed="false">Interior Design <span>36</span></button>
+        <button class="archive-filter" type="button" data-filter="exterior" aria-pressed="false">Exterior &amp; Architecture <span>18</span></button>
+        <p class="archive-status" aria-live="polite">Showing 18 of 108</p>
+      </div>
+      <div class="archive-grid" id="archive-grid"></div>
+      <button class="archive-more" id="archive-more" type="button">Load 18 more <span aria-hidden="true">&darr;</span></button>
+      <noscript><p class="archive-noscript">Enable JavaScript to explore the complete 108-piece archive.</p></noscript>
+    </section>
     <section class="expertise-section" id="expertise">
       <div class="expertise-heading">
-        <p class="eyebrow">02 / Expertise</p><h2>Creative range,<br><em>grounded in craft.</em></h2>
+        <p class="eyebrow">03 / Expertise</p><h2>Creative range,<br><em>grounded in craft.</em></h2>
         <p>From the first sketch to the final presentation, every stage is shaped by clear thinking and careful execution.</p>
       </div>
       <div class="service-list">
@@ -156,7 +179,7 @@
     </section>
 
     <section class="about-section" id="about">
-      <div class="about-topline"><p class="eyebrow">03 / About Rameez</p><p class="availability"><i></i> Available for selected opportunities</p></div>
+      <div class="about-topline"><p class="eyebrow">04 / About Rameez</p><p class="availability"><i></i> Available for selected opportunities</p></div>
       <div class="about-main">
         <h2>Good design does more than explain an idea.<em> It gives it presence.</em></h2>
         <div class="about-copy">
@@ -172,7 +195,7 @@
 
     <section class="experience-section" id="experience">
       <div class="experience-heading">
-        <p class="eyebrow">04 / Experience</p><h2>Built through<br><em>real-world practice.</em></h2>
+        <p class="eyebrow">05 / Experience</p><h2>Built through<br><em>real-world practice.</em></h2>
         <div class="skill-cloud" aria-label="Selected software skills"><span>Photoshop</span><span>Illustrator</span><span>InDesign</span><span>After Effects</span><span>Premiere Pro</span><span>AutoCAD</span><span>SketchUp</span><span>Lumion</span><span>V-Ray</span><span>Revit</span><span>Enscape</span></div>
       </div>
       <ol class="experience-list">
@@ -196,5 +219,95 @@
       <div class="footer-bottom"><span>&copy; 2026 Rameez Pallikkalakam</span><a href="#top">Back to top &uarr;</a></div>
     </footer>
   </main>
-</body>
+  <script>
+    (() => {
+      const sheets = [
+        { src: "assets/archive/graphic-identity.webp", category: "graphic", label: "Graphic Design", group: "Identity System", prefix: "G" },
+        { src: "assets/archive/graphic-packaging.webp", category: "graphic", label: "Graphic Design", group: "Packaging System", prefix: "G" },
+        { src: "assets/archive/graphic-posters.webp", category: "graphic", label: "Graphic Design", group: "Poster Series", prefix: "G" },
+        { src: "assets/archive/graphic-social.webp", category: "graphic", label: "Graphic Design", group: "Social Campaign", prefix: "G" },
+        { src: "assets/archive/graphic-editorial.webp", category: "graphic", label: "Graphic Design", group: "Editorial Design", prefix: "G" },
+        { src: "assets/archive/graphic-spatial.webp", category: "graphic", label: "Graphic Design", group: "Spatial Branding", prefix: "G" },
+        { src: "assets/archive/interior-living.webp", category: "interior", label: "Interior Design", group: "Living Space", prefix: "I" },
+        { src: "assets/archive/interior-private.webp", category: "interior", label: "Interior Design", group: "Private Suite", prefix: "I" },
+        { src: "assets/archive/interior-kitchen.webp", category: "interior", label: "Interior Design", group: "Kitchen & Dining", prefix: "I" },
+        { src: "assets/archive/interior-commercial.webp", category: "interior", label: "Interior Design", group: "Commercial Interior", prefix: "I" },
+        { src: "assets/archive/exterior-homes.webp", category: "exterior", label: "Exterior / Architecture", group: "Residential Exterior", prefix: "E" },
+        { src: "assets/archive/exterior-technical.webp", category: "exterior", label: "Exterior / Architecture", group: "Architectural Study", prefix: "E" }
+      ];
+
+      const positions = ["0%", "50%", "100%"];
+      const byCategory = { graphic: [], interior: [], exterior: [] };
+      const counters = { graphic: 0, interior: 0, exterior: 0 };
+
+      sheets.forEach((sheet) => {
+        for (let tile = 0; tile < 9; tile += 1) {
+          const count = ++counters[sheet.category];
+          byCategory[sheet.category].push({
+            ...sheet,
+            title: `${sheet.group} ${String(tile + 1).padStart(2, "0")}`,
+            code: `${sheet.prefix}${String(count).padStart(2, "0")}`,
+            x: positions[tile % 3],
+            y: positions[Math.floor(tile / 3)]
+          });
+        }
+      });
+
+      const allItems = [];
+      const categories = ["graphic", "interior", "exterior"];
+      const longestCollection = Math.max(...Object.values(byCategory).map((items) => items.length));
+      for (let index = 0; index < longestCollection; index += 1) {
+        categories.forEach((category) => {
+          if (byCategory[category][index]) allItems.push(byCategory[category][index]);
+        });
+      }
+
+      const grid = document.querySelector("#archive-grid");
+      const loadMore = document.querySelector("#archive-more");
+      const status = document.querySelector(".archive-status");
+      const filters = [...document.querySelectorAll(".archive-filter")];
+      let currentFilter = "all";
+      let visibleLimit = 18;
+
+      const createCard = (item) => {
+        const card = document.createElement("article");
+        card.className = "archive-card";
+        card.dataset.category = item.category;
+        card.innerHTML = `<div class="archive-thumb" role="img" aria-label="${item.title}, ${item.label}" style="--archive-sheet:url('${item.src}');--tile-x:${item.x};--tile-y:${item.y}"><span>${item.code}</span></div><div class="archive-card-meta"><h3>${item.title}</h3><span>${item.label}</span></div>`;
+        return card;
+      };
+
+      const render = () => {
+        const source = currentFilter === "all" ? allItems : byCategory[currentFilter];
+        const visible = source.slice(0, visibleLimit);
+        grid.replaceChildren(...visible.map(createCard));
+        status.textContent = `Showing ${visible.length} of ${source.length}`;
+        const remaining = source.length - visible.length;
+        loadMore.hidden = remaining === 0;
+        if (remaining > 0) {
+          loadMore.innerHTML = `Load ${Math.min(18, remaining)} more <span aria-hidden="true">&darr;</span>`;
+        }
+      };
+
+      filters.forEach((button) => {
+        button.addEventListener("click", () => {
+          currentFilter = button.dataset.filter;
+          visibleLimit = 18;
+          filters.forEach((candidate) => {
+            const isActive = candidate === button;
+            candidate.classList.toggle("is-active", isActive);
+            candidate.setAttribute("aria-pressed", String(isActive));
+          });
+          render();
+        });
+      });
+
+      loadMore.addEventListener("click", () => {
+        visibleLimit += 18;
+        render();
+      });
+
+      render();
+    })();
+  </script></body>
 </html>
