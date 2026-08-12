@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070707">
+  <meta name="description" content="Interior 3D visualization gallery by Rameez Pallikkalakam featuring living room, bedroom, bathroom, kitchen, dining and entrance hall renders.">
+  <title>Interior 3D Gallery — Rameez Pallikkalakam</title>
+  <link rel="stylesheet" href="styles.css?v=interior-1">
+</head>
+<body class="works-page interior-page">
+  <header class="works-nav">
+    <a class="works-logo" href="index.html" aria-label="Rameez Pallikkalakam home"><b>RP</b><span>Rameez<small>Pallikkalakam</small></span></a>
+    <nav aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a class="active" href="work.html">Works</a>
+      <a href="resume.html">Resume</a>
+      <a href="resume.html#contact">Contact</a>
+    </nav>
+    <a class="works-resume" href="work.html">All works <span>←</span></a>
+  </header>
+
+  <main>
+    <section class="interior-hero" aria-labelledby="interior-title">
+      <img src="assets/hero-interior.png" alt="Contemporary luxury living room interior visualization">
+      <div class="interior-hero-shade" aria-hidden="true"></div>
+      <div class="interior-hero-content">
+        <a href="work.html">Works / 3D Visualization</a>
+        <p><span></span> Interior Portfolio</p>
+        <h1 id="interior-title">Interior <em>3D</em></h1>
+        <div class="interior-hero-footer">
+          <p>A curated collection of residential interior environments developed with attention to proportion, material selection, lighting and atmosphere.</p>
+          <div><b>06</b><span>Room<br>Types</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="interior-gallery-section" aria-labelledby="interior-gallery-title">
+      <header class="interior-gallery-header">
+        <div><span>01</span><p>Interior categories</p></div>
+        <h2 id="interior-gallery-title">Explore Every <em>Room</em></h2>
+        <p>Click any render to view it at full size.</p>
+      </header>
+
+      <nav class="room-index" aria-label="Interior room types">
+        <a href="#living-room">Living Room</a><a href="#bedroom">Bedroom</a><a href="#kitchen">Kitchen</a><a href="#bathroom">Bathroom</a><a href="#dining-room">Dining Room</a><a href="#entrance-hall">Entrance Hall</a>
+      </nav>
+
+      <div class="interior-gallery-grid">
+        <a class="interior-project project-wide" id="living-room" href="room-gallery.html?room=living-room">
+          <img src="assets/hero-interior.png" alt="Luxury contemporary living room 3D visualization">
+          <span><small>01 / Social space</small><strong>Living Room</strong><i>View full render ↗</i></span>
+        </a>
+
+        <a class="interior-project project-tall" id="bedroom" href="room-gallery.html?room=master-bedroom">
+          <img src="assets/interior-bedroom.png" alt="Luxury contemporary master bedroom 3D visualization">
+          <span><small>02 / Private space</small><strong>Master Bedroom</strong><i>View full render ↗</i></span>
+        </a>
+
+        <a class="interior-project project-medium" id="kitchen" href="room-gallery.html?room=kitchen">
+          <img src="assets/interior-kitchen.png" alt="Luxury contemporary kitchen 3D visualization">
+          <span><small>03 / Culinary space</small><strong>Kitchen</strong><i>View full render ↗</i></span>
+        </a>
+
+        <a class="interior-project project-large" id="bathroom" href="room-gallery.html?room=bathroom">
+          <img src="assets/interior-bathroom.png" alt="Luxury spa bathroom 3D visualization">
+          <span><small>04 / Wellness space</small><strong>Bathroom</strong><i>View full render ↗</i></span>
+        </a>
+
+        <a class="interior-project project-half" id="dining-room" href="room-gallery.html?room=dining-room">
+          <img src="assets/interior-dining.png" alt="Luxury contemporary dining room 3D visualization">
+          <span><small>05 / Hospitality space</small><strong>Dining Room</strong><i>View full render ↗</i></span>
+        </a>
+
+        <a class="interior-project project-half" id="entrance-hall" href="room-gallery.html?room=entrance-hall">
+          <img src="assets/interior-entrance-hall.png" alt="Grand contemporary entrance hall 3D visualization">
+          <span><small>06 / Arrival space</small><strong>Entrance Hall</strong><i>View full render ↗</i></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="interior-next">
+      <p>Continue exploring</p>
+      <a href="work.html">View Exterior &amp; Landscape 3D <span>→</span></a>
+    </section>
+  </main>
+
+  <footer class="works-footer">
+    <p>© <span data-year>2026</span> Rameez Pallikkalakam</p>
+    <a href="work.html">Back to all works ↑</a>
+  </footer>
+
+  <div class="work-lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" hidden>
+    <button type="button" class="lightbox-close" aria-label="Close preview">Close ×</button>
+    <figure><img src="" alt=""><figcaption id="lightbox-title"></figcaption></figure>
+  </div>
+  <script src="work.js?v=2" defer></script>
+</body>
+</html>

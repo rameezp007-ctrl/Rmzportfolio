@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070707">
+  <meta name="description" content="Selected interior, 3D visualization, graphic design, logo and technical drawing work by Rameez Pallikkalakam.">
+  <title>Portfolio Works — Rameez Pallikkalakam</title>
+  <link rel="stylesheet" href="styles.css?v=original-works-1">
+</head>
+<body class="works-page unified-works-page">
+  <header class="works-nav">
+    <a class="works-logo" href="index.html" aria-label="Rameez Pallikkalakam home"><b>RP</b><span>Rameez<small>Pallikkalakam</small></span></a>
+    <nav aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a class="active" href="work.html">Works</a>
+      <a href="resume.html">Resume</a>
+      <a href="resume.html#contact">Contact</a>
+    </nav>
+    <a class="works-resume" href="resume.html">View résumé <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="works-hero unified-works-hero" aria-labelledby="works-title">
+      <img src="assets/old-portfolio/interior-03.jpg" alt="Interior visualization by Rameez Pallikkalakam">
+      <div class="works-hero-shade" aria-hidden="true"></div>
+      <div class="works-hero-content">
+        <p><span></span> Selected Portfolio</p>
+        <h1 id="works-title">Selected <em>Portfolio Works</em></h1>
+        <div>
+          <p>Original interior and 3D visualizations, graphic design, brand identity and technical drawing projects presented together for quick review.</p>
+          <a href="#original-projects">View project gallery <b>↓</b></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="original-projects" id="original-projects" aria-labelledby="original-projects-title">
+      <header class="original-projects-heading">
+        <div>
+          <p><span>81</span> Original projects</p>
+          <h2 id="original-projects-title">Project <em>Gallery</em></h2>
+        </div>
+        <p>Interior and 3D visualization work is presented first, followed by graphic design, logos and technical drawings. Select an image to view it full-screen.</p>
+      </header>
+
+      <div class="original-project-filters" aria-label="Filter portfolio projects">
+        <button type="button" class="active" data-project-filter="all" aria-pressed="true">All Works <span>81</span></button>
+        <button type="button" data-project-filter="interior" aria-pressed="false">Interior &amp; 3D <span>39</span></button>
+        <button type="button" data-project-filter="graphic" aria-pressed="false">Graphic Design <span>21</span></button>
+        <button type="button" data-project-filter="logo" aria-pressed="false">Logos <span>15</span></button>
+        <button type="button" data-project-filter="drawing" aria-pressed="false">Drawings <span>06</span></button>
+      </div>
+
+      <div class="original-project-grid" data-original-project-grid></div>
+      <p class="original-project-status" data-original-project-status aria-live="polite">Showing all 81 original projects</p>
+    </section>
+
+    <section class="works-contact">
+      <p>Available for opportunities</p>
+      <h2>Let’s create a strong <em>visual story.</em></h2>
+      <a href="mailto:rameezpallikkalakam@gmail.com">Start a conversation <span>↗</span></a>
+    </section>
+  </main>
+
+  <footer class="works-footer">
+    <p>© <span data-year>2026</span> Rameez Pallikkalakam</p>
+    <a href="index.html">Back to home ↑</a>
+  </footer>
+
+  <div class="work-lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" hidden>
+    <button type="button" class="lightbox-close" aria-label="Close preview">Close ×</button>
+    <figure><img src="" alt=""><figcaption id="lightbox-title"></figcaption></figure>
+  </div>
+  <script src="portfolio-gallery.js?v=1" defer></script>
+  <script src="work.js?v=3" defer></script>
+</body>
+</html>

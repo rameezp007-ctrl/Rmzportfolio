@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070707">
+  <meta name="description" content="Interior 3D room visualization gallery by Rameez Pallikkalakam.">
+  <title>Room Gallery — Rameez Pallikkalakam</title>
+  <link rel="stylesheet" href="styles.css?v=room-gallery-1">
+</head>
+<body class="works-page room-gallery-page">
+  <header class="works-nav">
+    <a class="works-logo" href="index.html" aria-label="Rameez Pallikkalakam home"><b>RP</b><span>Rameez<small>Pallikkalakam</small></span></a>
+    <nav aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a class="active" href="work.html">Works</a>
+      <a href="resume.html">Resume</a>
+      <a href="resume.html#contact">Contact</a>
+    </nav>
+    <a class="works-resume" href="interior.html">Interior 3D <span>←</span></a>
+  </header>
+
+  <main>
+    <section class="room-gallery-hero" aria-labelledby="room-gallery-title">
+      <img data-room-hero src="assets/hero-interior.png" alt="">
+      <div class="room-gallery-shade" aria-hidden="true"></div>
+      <div class="room-gallery-hero-content">
+        <a href="interior.html">Interior 3D / Room Types</a>
+        <p><span></span> Unique Render Collection</p>
+        <h1 id="room-gallery-title"><span data-room-title>Living Room</span><em>3D Gallery</em></h1>
+        <div>
+          <p data-room-description>A premium collection of residential interior concepts, material studies and atmospheric views.</p>
+          <strong><b data-room-count>03</b><small>Unique<br>Renders</small></strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="room-render-section" aria-labelledby="room-render-title">
+      <header class="room-render-header">
+        <div><span data-room-range>01—03</span><p>Curated views</p></div>
+        <h2 id="room-render-title"><span data-room-title>Living Room</span> <em>Renders</em></h2>
+        <p>Click any image to view it at full size. Every render includes the centered RP watermark.</p>
+      </header>
+      <div class="room-render-grid" data-room-grid aria-live="polite"></div>
+    </section>
+
+    <nav class="room-gallery-navigation" aria-label="Room gallery navigation">
+      <a href="interior.html">← All Interior Categories</a>
+      <a href="work.html">Exterior &amp; Landscape 3D →</a>
+    </nav>
+  </main>
+
+  <footer class="works-footer">
+    <p>© <span data-year>2026</span> Rameez Pallikkalakam</p>
+    <a href="interior.html">Back to Interior 3D ↑</a>
+  </footer>
+
+  <div class="work-lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" hidden>
+    <button type="button" class="lightbox-close" aria-label="Close preview">Close ×</button>
+    <figure><img src="" alt=""><figcaption id="lightbox-title"></figcaption></figure>
+  </div>
+  <script src="room-gallery.js?v=1" defer></script>
+  <script src="work.js?v=3" defer></script>
+</body>
+</html>
