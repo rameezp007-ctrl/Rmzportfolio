@@ -70,12 +70,11 @@ button { color: inherit; font: inherit; }
 .service h3 { margin: 0; font-size: 9px; line-height: 1.35; text-transform: uppercase; }
 
 .work-card-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
-.work-card { position: relative; min-height: 420px; overflow: hidden; border: 1px solid rgba(211,173,125,.46); text-decoration: none; }
-.work-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg,rgba(5,5,5,.98) 0%,rgba(5,5,5,.54) 45%,rgba(5,5,5,.2) 75%); }
-.work-card img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.65); transition: transform .55s,filter .35s; }
-.work-card:hover img { transform: scale(1.045); filter: saturate(.95); }
+.work-card { position: relative; min-height: 235px; display: flex; align-items: flex-end; overflow: hidden; padding: 28px 22px 22px; border: 1px solid rgba(211,173,125,.36); background: linear-gradient(145deg,#17130f 0%,#0b0a09 52%,#070707 100%); text-decoration: none; transition: border-color .3s,transform .3s,background .3s; }
+.work-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg,rgba(211,173,125,.08),transparent 42%); pointer-events: none; }
+.work-card:hover { border-color: var(--gold); background: linear-gradient(145deg,#1d1711 0%,#0b0a09 55%,#070707 100%); transform: translateY(-3px); }
 .work-no { position: absolute; z-index: 2; left: 20px; top: 14px; color: var(--gold); font-family: var(--serif); font-size: 42px; }
-.work-card > div { position: absolute; z-index: 2; inset: auto 20px 20px; }
+.work-card > div { position: relative; z-index: 2; width: 100%; }
 .work-card small { color: var(--gold-2); font-size: 8px; letter-spacing: .08em; text-transform: uppercase; }
 .work-card h3 { margin: 10px 0 27px; font-size: 16px; line-height: 1.2; text-transform: uppercase; }
 .work-card b { display: flex; justify-content: space-between; padding-top: 13px; border-top: 1px solid rgba(255,255,255,.24); font-size: 8px; text-transform: uppercase; }
@@ -138,7 +137,7 @@ button { color: inherit; font: inherit; }
   .site-header nav { position: fixed; inset: var(--header) 0 0; display: none; align-content: start; justify-items: start; padding: 35px var(--pad); background: #080808; }.site-header nav.open { display: grid; }.site-header nav a { height: auto; padding: 10px 0; font-size: 25px; }.header-cta { display: none; }
   .hero { grid-template-columns: 46px 1fr; }.hero-copy { grid-column: 2; grid-row: 1; padding: 60px 30px; }.hero-image { grid-column: 2; min-height: 440px; }.social-rail { grid-row: 1 / 3; }
   .service-grid { grid-template-columns: repeat(2,1fr); }.service:nth-child(2n) { border-right: 0; }.service:last-child { grid-column: 1/-1; border-top: 1px solid var(--line); }
-  .work-card-grid { grid-template-columns: 1fr; }.work-card { min-height: 360px; }
+  .work-card-grid { grid-template-columns: 1fr; }.work-card { min-height: 210px; }
   .about-tools,.education-capabilities { grid-template-columns: 1fr; }
   .contact { grid-template-columns: 1fr; }.contact-gallery { min-height: 280px; }
 }
